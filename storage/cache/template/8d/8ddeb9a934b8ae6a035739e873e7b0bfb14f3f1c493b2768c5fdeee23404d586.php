@@ -13,7 +13,7 @@ use Twig\Source;
 use Twig\Template;
 
 /* nice/template/common/header.twig */
-class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2135ab extends \Twig\Template
+class __TwigTemplate_58d82c5c2a8304ec8c9710a968f11c844a017241cb18fdc85d58765a116a5351 extends \Twig\Template
 {
     private $source;
     private $macros = [];
@@ -160,102 +160,13 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
         // line 43
         echo "</head>
 <body>
-<nav id=\"top\">
-  <div class=\"container top-container\">
-    ";
-        // line 47
-        echo ($context["menu_top"] ?? null);
-        echo "
-    
-    <div class=\"top-buttons pull-right\">     
-        
-      ";
-        // line 51
-        echo ($context["currency"] ?? null);
-        echo "
-      ";
-        // line 52
-        echo ($context["language"] ?? null);
-        echo "
-      
-      ";
-        // line 60
-        echo "        
-      <div class=\"account-container top-buttons--item\">
-        <div class=\"btn-group dropdown\">
-          <a href=\"";
-        // line 63
-        echo ($context["account"] ?? null);
-        echo "\" title=\"";
-        echo ($context["text_account"] ?? null);
-        echo "\" class=\"btn btn-link dropdown-toggle padding-r-n-xs\" data-toggle=\"dropdown\"><i class=\"fa fa-user-o\"></i> <span class=\"\">";
-        echo ($context["nice_text_account"] ?? null);
-        echo "</span> <i class=\"fa fa-caret-down\"></i></a>
-
-          <ul class=\"dropdown-menu dropdown-menu-right\">
-            ";
-        // line 66
-        if (($context["logged"] ?? null)) {
-            // line 67
-            echo "            <li><a href=\"";
-            echo ($context["account"] ?? null);
-            echo "\">";
-            echo ($context["text_account"] ?? null);
-            echo "</a></li>
-            <li><a href=\"";
-            // line 68
-            echo ($context["order"] ?? null);
-            echo "\">";
-            echo ($context["text_order"] ?? null);
-            echo "</a></li>
-            <li><a href=\"";
-            // line 69
-            echo ($context["transaction"] ?? null);
-            echo "\">";
-            echo ($context["text_transaction"] ?? null);
-            echo "</a></li>
-            <li><a href=\"";
-            // line 70
-            echo ($context["download"] ?? null);
-            echo "\">";
-            echo ($context["text_download"] ?? null);
-            echo "</a></li>
-            <li><a href=\"";
-            // line 71
-            echo ($context["logout"] ?? null);
-            echo "\">";
-            echo ($context["text_logout"] ?? null);
-            echo "</a></li>
-            ";
-        } else {
-            // line 73
-            echo "            <li><a href=\"";
-            echo ($context["register"] ?? null);
-            echo "\">";
-            echo ($context["text_register"] ?? null);
-            echo "</a></li>
-            <li><a href=\"";
-            // line 74
-            echo ($context["login"] ?? null);
-            echo "\">";
-            echo ($context["text_login"] ?? null);
-            echo "</a></li>
-            ";
-        }
-        // line 76
-        echo "          </ul>
-        </div>
-      </div>      
-    </div>
-  </div>
-</nav>
 <header>
   <div class=\"container\">
     <div id=\"top-2\">      
       <div class=\"top-2--column logo-column\">
         <div id=\"logo\">
           ";
-        // line 87
+        // line 50
         if (($context["logo"] ?? null)) {
             echo "<a href=\"";
             echo ($context["home"] ?? null);
@@ -268,7 +179,7 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
             echo "\" class=\"img-responsive\" /></a>
           ";
         } else {
-            // line 89
+            // line 52
             echo "          <h1><a href=\"";
             echo ($context["home"] ?? null);
             echo "\">";
@@ -276,15 +187,15 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
             echo "</a></h1>
           ";
         }
-        // line 91
+        // line 54
         echo "        </div>
       </div>
         
       ";
-        // line 97
+        // line 60
         echo "        
       <div class=\"top-2--column search-column--desktop\">";
-        // line 98
+        // line 61
         echo ($context["search"] ?? null);
         echo "</div>
             
@@ -292,7 +203,7 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
         <div class=\"header-icons-container text-right\">          
           <div class=\"header-icons-item\">
             <a href=\"";
-        // line 103
+        // line 66
         echo ($context["contact"] ?? null);
         echo "\">
               <span class=\"fa-stack fa-lg header-icon\">
@@ -300,26 +211,26 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
                 <i class=\"fa fa-phone fa-stack-1x \"></i>
               </span>
               <span class=\"header-icon-label hidden-xs\"><span class=\"hidden-xs hidden-sm hidden-md\"> ";
-        // line 108
+        // line 71
         echo ($context["telephone"] ?? null);
         echo "</span></span>
             </a>
           </div>                  
           <div class=\"header-icons-item\" style=\"display: none;\">
             <a href=\"";
-        // line 112
+        // line 75
         echo ($context["wishlist"] ?? null);
         echo "\" id=\"wishlist-total\">
               <i class=\"fa fa-heart-o fa-2x fa-lg header-icon\"></i>
               <span class=\"header-icon-label hidden-xs\">";
-        // line 114
+        // line 77
         echo ($context["text_wishlist"] ?? null);
         echo "</span>
             </a>
           </div>          
           <div class=\"header-icons-item\" style=\"display: none;\">
             <a href=\"";
-        // line 118
+        // line 81
         echo ($context["compare"] ?? null);
         echo "\">
               <span class=\"fa-stack fa-lg header-icon\">
@@ -327,18 +238,18 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
                 <i class=\"fa fa-exchange fa-stack-1x \"></i>
               </span>
               <span class=\"header-icon-label hidden-xs\">";
-        // line 123
+        // line 86
         echo ($context["nice_text_compare"] ?? null);
         echo "</span>
             </a>
           </div>          
           ";
-        // line 130
+        // line 93
         echo "          </div>
       </div>
           
       <div class=\"top-2--column cart-column text-right\">";
-        // line 133
+        // line 96
         echo ($context["cart"] ?? null);
         echo "</div>
       
@@ -347,7 +258,7 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
   </div>
 </header>
 ";
-        // line 139
+        // line 102
         echo ($context["menu"] ?? null);
         echo "
 ";
@@ -365,7 +276,7 @@ class __TwigTemplate_de4a5ecd3aac67039d089f0603807782634f45e51ec2482bc2d37458ca2
 
     public function getDebugInfo()
     {
-        return array (  351 => 139,  342 => 133,  337 => 130,  331 => 123,  323 => 118,  316 => 114,  311 => 112,  304 => 108,  296 => 103,  288 => 98,  285 => 97,  280 => 91,  272 => 89,  259 => 87,  246 => 76,  239 => 74,  232 => 73,  225 => 71,  219 => 70,  213 => 69,  207 => 68,  200 => 67,  198 => 66,  188 => 63,  183 => 60,  178 => 52,  174 => 51,  167 => 47,  161 => 43,  153 => 41,  149 => 40,  138 => 38,  134 => 37,  131 => 36,  122 => 34,  118 => 33,  113 => 30,  110 => 25,  97 => 23,  93 => 22,  89 => 20,  83 => 18,  81 => 17,  75 => 15,  73 => 14,  69 => 13,  65 => 12,  54 => 6,  47 => 4,  41 => 3,  37 => 1,);
+        return array (  262 => 102,  253 => 96,  248 => 93,  242 => 86,  234 => 81,  227 => 77,  222 => 75,  215 => 71,  207 => 66,  199 => 61,  196 => 60,  191 => 54,  183 => 52,  170 => 50,  161 => 43,  153 => 41,  149 => 40,  138 => 38,  134 => 37,  131 => 36,  122 => 34,  118 => 33,  113 => 30,  110 => 25,  97 => 23,  93 => 22,  89 => 20,  83 => 18,  81 => 17,  75 => 15,  73 => 14,  69 => 13,  65 => 12,  54 => 6,  47 => 4,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
