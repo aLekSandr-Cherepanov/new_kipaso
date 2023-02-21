@@ -1,0 +1,144 @@
+{{ header }}
+<div id="account-account" class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+      <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+  {% if success %}
+    <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}</div>
+  {% endif %}
+  <h1 class="title-page">{{ text_my_account }}</h1>
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+      {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+      {% set class = 'col-lg-9 col-md-8' %}
+    {% else %}
+      {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}
+      <div class="card">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ edit }}">
+              <span class="pe-7s-edit"></span>
+              {{ text_edit }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ password }}">
+              <span class="pe-7s-lock"></span>
+              {{ text_password }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ address }}">
+              <span class="pe-7s-map-marker"></span>
+              {{ text_address }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ wishlist }}">
+              <span class="pe-7s-like"></span>
+              {{ text_wishlist }}
+            </a>
+          </div>
+        </div>
+        {% if credit_cards %}
+          <h2>{{ text_credit_card }}</h2>
+          <div class="row">
+            {% for credit_card in credit_cards %}
+              <div class="col-md-3 col-sm-6 col-xs-6">
+                <a class="account-box" href="{{ credit_card.href }}">
+                  <span class="pe-7s-credit"></span>
+                  {{ credit_card.name }}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <h2 class="title-page">{{ text_my_affiliate }}</h2>
+        <div class="row">
+          {% if not tracking %}
+            <div class="col-md-3 col-sm-6 col-xs-6">
+              <a class="account-box" href="{{ affiliate }}">
+                <span class="pe-7s-note2"></span>
+                {{ text_affiliate_add }}
+              </a>
+            </div>
+          {% else %}
+            <div class="col-md-3 col-sm-6 col-xs-6">
+              <a class="account-box" href="{{ affiliate }}">
+                <span class="pe-7s-note2"></span>
+                {{ text_affiliate_edit }}
+              </a>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+              <a class="account-box" href="{{ tracking }}">
+                <span class="pe-7s-note2"></span>
+                {{ text_tracking }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+        <h2 class="title-page">{{ text_my_orders }}</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ order }}">
+              <span class="pe-7s-note2"></span>
+              {{ text_order }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ download }}">
+              <span class="pe-7s-download"></span>
+              {{ text_download }}
+            </a>
+          </div>
+          {% if reward %}
+            <div class="col-md-3 col-sm-6 col-xs-6">
+              <a class="account-box" href="{{ reward }}">
+                <span class="pe-7s-gift"></span>
+                {{ text_reward }}
+              </a>
+            </div>
+          {% endif %}
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ return }}">
+              <span class="pe-7s-repeat"></span>
+              {{ text_return }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ transaction }}">
+              <span class="pe-7s-bookmarks"></span>
+              {{ text_transaction }}
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ recurring }}">
+              <span class="pe-7s-cash"></span>
+              {{ text_recurring }}
+            </a>
+          </div>
+        </div>
+        <h2 class="title-page">{{ text_my_newsletter }}</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <a class="account-box" href="{{ newsletter }}">
+              <span class="pe-7s-mail"></span>
+              {{ text_newsletter }}
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}
+
+
+
+
+

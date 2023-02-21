@@ -1,0 +1,128 @@
+{{ header }}
+<div class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+      <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+  {{ content_top }}
+  <div class="row">{{ column_right }}
+    {{ column_left }}
+    {% if column_left and column_right %}
+      {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+      {% set class = 'col-lg-9 col-md-8' %}
+    {% else %}
+      {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">
+      <h1 class="title-page">{{ heading_title }}</h1>
+      {% if products %}
+        <div class="filter-row">
+          <div class="row">
+            <div class="col-md-3 col-sm-3  hidden-xs">
+              <div class="btn-group btn-group-sm btn-view">
+                <button type="button" id="grid-view" class="btn" data-toggle="tooltip"  title="{{ button_grid }}"><i class="fa fa-th"></i></button>
+                <button type="button" id="list-view" class="btn" data-toggle="tooltip"  title="{{ button_list }}"><i class="fa fa-th-list"></i></button>
+                <button type="button" id="pricelist-view" class="btn" data-toggle="tooltip"  title="{{ button_pricelist }}"><i class="fa fa-list"></i></button>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-4 hide-tablet">
+              <div class="form-group">
+                <a href="{{ compare }}" id="compare-total-link" class="btn-link">{{ text_compare }}</a>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-5">
+              <div class="form-group input-group">
+                <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+                <select id="input-sort" class="form-control" onchange="location = this.value;">
+                  {% for sorts in sorts %}
+                    {% if sorts.value == '%s-%s'|format(sort, order) %}
+                      <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                    {% else %}
+                      <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+              <div class="form-group input-group">
+                <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+                <select id="input-limit" class="form-control" onchange="location = this.value;">
+                  {% for limits in limits %}
+                    {% if limits.value == limit %}
+                      <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+                    {% else %}
+                      <option value="{{ limits.href }}">{{ limits.text }}</option>
+                    {% endif %}
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {% for product in products %}
+            <div class="product-layout product-list col-xs-12">
+              <div class="product-thumb transition">
+                {% if product.sale %}
+                  <div class="sale">-{{ product.sale }}%</div>
+                {% endif %}
+                <div class="image">
+                  <a href="{{ product.href }}">
+                    <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" />
+                  </a>
+                </div>
+                <div class="caption">
+                  <h3><a href="{{ product.href }}">{{ product.name }}</a></h3>
+                  <div class="rating">
+                    {% for i in 1..5 %}
+                      {% if product.rating < i %}
+                        <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                      {% else %}
+                        <span class="fa fa-stack"><i class="fa fa-star stary fa-stack-2x"></i><i class="fa fa-star fa-stack-2x"></i></span>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <div class="description">{{ product.description }}</div>
+                  {% if product.price %}
+                    <div class="price">
+                      {% if not product.special %}
+                        {{ product.price }}
+                      {% else %}
+                        <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                  <div class="button-group">
+                    <button class="icon-btn" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
+                    <span class="pe-7s-like"></span>
+                    </button>
+                    <button class="btn main-btn" type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-basket" aria-hidden="true"></i>{{ button_cart}}</button>
+                    <button class="icon-btn" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');">
+                      <span class="pe-7s-repeat"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="pagination-line">
+          <div class="row">
+            <div class="col-sm-6 text-left">{{ pagination }}</div>
+            <div class="col-sm-6 text-right">{{ result }}</div>
+          </div>
+        </div>
+      {% else %}
+        <p>{{ text_empty }}</p>
+        <div class="buttons">
+          <a href="{{ continue }}" class="btn main-btn">{{ button_continue }}</a><br><br>
+        </div>
+      {% endif %}
+    </div>
+    {{ column_left }}</div>
+  {{ content_bottom }}
+</div>
+{{ footer }}

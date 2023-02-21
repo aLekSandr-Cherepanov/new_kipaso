@@ -1,0 +1,20 @@
+	<li class="dropdown">
+    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+	{{ text_blog }} <i class="fa fa-angle-down"></i>
+	</button>
+	<ul class="dropdown-menu">
+	{% for category in categories %}
+        {% if category.children %}
+        <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+            {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}   
+				{% for child in children %}
+                <li><a href="{{ child.href }}"><i class="fa fa-angle-right"></i> {{ child.name }}</a></li>
+				{% endfor %}
+			{% endfor %}
+		{% else %}
+        <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+        {% endif %}
+	{% endfor %}
+	<li><a href="{{ blog }}" class="see-all">{{ text_all }} {{ text_blog }}</a></li>
+	</ul>
+	</li>

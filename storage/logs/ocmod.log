@@ -1,0 +1,723 @@
+2023-02-13 11:41:15 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Fix opencart 3 installer folder limitation
+
+FILE: admin/controller/marketplace/install.php
+CODE: $safe = false;
+LINE: 146
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 215
+----------------------------------------------------------------
+2023-02-13 11:42:12 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Nice MegaMenu
+
+FILE: admin/controller/catalog/category.php
+CODE: $this->load->language('catalog/category');
+LINE: 18
+LINE: 53
+CODE: $this->load->model('tool/image');
+LINE: 455
+CODE: $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+LINE: 475
+CODE: if (isset($this->request->post['status'])) {
+LINE: 511
+CODE: $this->model_catalog_category->addCategory($this->request->post);
+LINE: 27
+CODE: if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+LINE: 26
+LINE: 65
+CODE: if (isset($this->request->post['selected']) && $this->validateDelete()) {
+LINE: 99
+
+FILE: admin/model/catalog/category.php
+CODE: if (isset($data['image'])) {
+LINE: 13
+LINE: 77
+CODE: status = '" . (int)$data['status'] . "',
+LINE: 3
+LINE: 69
+CODE: meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'
+LINE: 18
+LINE: 84
+CODE: 'description'      => $result['description']
+LINE: 283
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <li><a href="#tab-seo" data-toggle="tab">{{ tab_seo }}</a></li>
+LINE: 34
+CODE: <div class="tab-pane" id="tab-seo">
+LINE: 262
+
+FILE: catalog/controller/common/menu.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+LINE: 20
+CODE: foreach ($children as $child) {
+LINE: 49
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 57
+CODE: 'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+LINE: 67
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+----------------------------------------------------------------
+MOD: Nice Theme: Product List
+
+FILE: catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 207
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 196
+
+FILE: catalog/controller/product/product.php
+CODE: $data['products'][] = array(
+LINE: 440
+
+FILE: catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 233
+
+FILE: catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 125
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'][] = array(
+LINE: 64
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'][] = array(
+LINE: 64
+----------------------------------------------------------------
+MOD: Fix opencart 3 installer folder limitation
+
+FILE: admin/controller/marketplace/install.php
+CODE: $safe = false;
+LINE: 146
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 215
+----------------------------------------------------------------
+MOD: Nice Theme
+
+FILE: catalog/controller/common/header.php
+CODE: $this->load->language('common/header');
+LINE: 46
+CODE: $data['wishlist']
+LINE: 61
+
+FILE: catalog/controller/common/footer.php
+CODE: $this->load->language('common/footer');
+LINE: 4
+CODE: $data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+LINE: 32
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $this->load->language('product/product');
+LINE: 6
+LINE: 555
+LINE: 595
+LINE: 640
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->load->language('checkout/cart');
+LINE: 4
+LINE: 264
+LINE: 386
+LINE: 413
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->load->language('product/compare');
+LINE: 4
+LINE: 142
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->load->language('account/wishlist');
+LINE: 10
+LINE: 118
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'),
+LINE: 382
+LINE: 491
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 176
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+LINE: 146
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+LINE: 165
+
+FILE: catalog/controller/common/cart.php
+CODE: $this->load->language('common/cart');
+LINE: 4
+CODE: $data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 50
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 382
+LINE: 491
+
+FILE: catalog/controller/common/search.php
+CODE: return $this->load->view('common/search', $data);
+LINE: 66
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['menu'] = $this->load->controller('common/menu');
+LINE: 80
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 485
+
+FILE: catalog/controller/common/home.php
+CODE: $data['column_left']
+LINE: 13
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['column_left'] = $this->load->controller('common/column_left');
+LINE: 472
+CODE: $data['column_right'] = $this->load->controller('common/column_right');
+LINE: 473
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 37
+----------------------------------------------------------------
+2023-02-14 12:34:40 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Nice MegaMenu
+
+FILE: admin/controller/catalog/category.php
+CODE: $this->load->language('catalog/category');
+LINE: 18
+LINE: 53
+CODE: $this->load->model('tool/image');
+LINE: 455
+CODE: $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+LINE: 475
+CODE: if (isset($this->request->post['status'])) {
+LINE: 511
+CODE: $this->model_catalog_category->addCategory($this->request->post);
+LINE: 27
+CODE: if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+LINE: 26
+LINE: 65
+CODE: if (isset($this->request->post['selected']) && $this->validateDelete()) {
+LINE: 99
+
+FILE: admin/model/catalog/category.php
+CODE: if (isset($data['image'])) {
+LINE: 13
+LINE: 77
+CODE: status = '" . (int)$data['status'] . "',
+LINE: 3
+LINE: 69
+CODE: meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'
+LINE: 18
+LINE: 84
+CODE: 'description'      => $result['description']
+LINE: 283
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <li><a href="#tab-seo" data-toggle="tab">{{ tab_seo }}</a></li>
+LINE: 34
+CODE: <div class="tab-pane" id="tab-seo">
+LINE: 262
+
+FILE: catalog/controller/common/menu.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+LINE: 20
+CODE: foreach ($children as $child) {
+LINE: 49
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 57
+CODE: 'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+LINE: 67
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+----------------------------------------------------------------
+MOD: Nice Theme: Product List
+
+FILE: catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 207
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 196
+
+FILE: catalog/controller/product/product.php
+CODE: $data['products'][] = array(
+LINE: 440
+
+FILE: catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 233
+
+FILE: catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 125
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'][] = array(
+LINE: 64
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'][] = array(
+LINE: 64
+----------------------------------------------------------------
+MOD: Featured Plus
+
+FILE: admin/controller/extension/module/featured.php
+CODE: if (isset($this->request->post['status']))
+LINE: 165
+
+FILE: (sub modification) catalog/controller/extension/module/featured.php
+CODE: $products =
+LINE: 30
+
+FILE: admin/language/en-gb/extension/module/featured.php
+CODE: <?php
+LINE: 6
+----------------------------------------------------------------
+MOD: Fix opencart 3 installer folder limitation
+
+FILE: admin/controller/marketplace/install.php
+CODE: $safe = false;
+LINE: 146
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 215
+----------------------------------------------------------------
+MOD: Nice Theme
+
+FILE: catalog/controller/common/header.php
+CODE: $this->load->language('common/header');
+LINE: 46
+CODE: $data['wishlist']
+LINE: 61
+
+FILE: catalog/controller/common/footer.php
+CODE: $this->load->language('common/footer');
+LINE: 4
+CODE: $data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+LINE: 32
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $this->load->language('product/product');
+LINE: 6
+LINE: 555
+LINE: 595
+LINE: 640
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->load->language('checkout/cart');
+LINE: 4
+LINE: 264
+LINE: 386
+LINE: 413
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->load->language('product/compare');
+LINE: 4
+LINE: 142
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->load->language('account/wishlist');
+LINE: 10
+LINE: 118
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'),
+LINE: 382
+LINE: 491
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 176
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+LINE: 146
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+LINE: 165
+
+FILE: catalog/controller/common/cart.php
+CODE: $this->load->language('common/cart');
+LINE: 4
+CODE: $data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 50
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 382
+LINE: 491
+
+FILE: catalog/controller/common/search.php
+CODE: return $this->load->view('common/search', $data);
+LINE: 66
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['menu'] = $this->load->controller('common/menu');
+LINE: 80
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 485
+
+FILE: catalog/controller/common/home.php
+CODE: $data['column_left']
+LINE: 13
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['column_left'] = $this->load->controller('common/column_left');
+LINE: 472
+CODE: $data['column_right'] = $this->load->controller('common/column_right');
+LINE: 473
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 37
+----------------------------------------------------------------
+2023-02-14 12:38:29 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Nice MegaMenu
+
+FILE: admin/controller/catalog/category.php
+CODE: $this->load->language('catalog/category');
+LINE: 18
+LINE: 53
+CODE: $this->load->model('tool/image');
+LINE: 455
+CODE: $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+LINE: 475
+CODE: if (isset($this->request->post['status'])) {
+LINE: 511
+CODE: $this->model_catalog_category->addCategory($this->request->post);
+LINE: 27
+CODE: if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+LINE: 26
+LINE: 65
+CODE: if (isset($this->request->post['selected']) && $this->validateDelete()) {
+LINE: 99
+
+FILE: admin/model/catalog/category.php
+CODE: if (isset($data['image'])) {
+LINE: 13
+LINE: 77
+CODE: status = '" . (int)$data['status'] . "',
+LINE: 3
+LINE: 69
+CODE: meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'
+LINE: 18
+LINE: 84
+CODE: 'description'      => $result['description']
+LINE: 283
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <li><a href="#tab-seo" data-toggle="tab">{{ tab_seo }}</a></li>
+LINE: 34
+CODE: <div class="tab-pane" id="tab-seo">
+LINE: 262
+
+FILE: catalog/controller/common/menu.php
+CODE: $categories = $this->model_catalog_category->getCategories(0);
+LINE: 20
+CODE: foreach ($children as $child) {
+LINE: 49
+CODE: 'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+LINE: 57
+CODE: 'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
+LINE: 67
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+CODE: return $this->load->view('common/menu', $data);
+LINE: 121
+----------------------------------------------------------------
+MOD: Nice Theme: Product List
+
+FILE: catalog/controller/product/category.php
+CODE: $data['products'][] = array(
+LINE: 207
+
+FILE: catalog/controller/product/manufacturer.php
+CODE: $data['products'][] = array(
+LINE: 196
+
+FILE: catalog/controller/product/product.php
+CODE: $data['products'][] = array(
+LINE: 440
+
+FILE: catalog/controller/product/search.php
+CODE: $data['products'][] = array(
+LINE: 233
+
+FILE: catalog/controller/product/special.php
+CODE: $data['products'][] = array(
+LINE: 125
+
+FILE: catalog/controller/extension/module/bestseller.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/latest.php
+CODE: $data['products'][] = array(
+LINE: 57
+
+FILE: catalog/controller/extension/module/special.php
+CODE: $data['products'][] = array(
+LINE: 64
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $data['products'][] = array(
+LINE: 64
+----------------------------------------------------------------
+MOD: Featured Plus
+
+FILE: admin/controller/extension/module/featured.php
+CODE: if (isset($this->request->post['status']))
+LINE: 165
+
+FILE: admin/view/template/extension/module/featured.twig
+CODE: <div class="form-group">
+LINE: 66
+
+FILE: (sub modification) catalog/controller/extension/module/featured.php
+CODE: $products =
+LINE: 30
+
+FILE: admin/language/en-gb/extension/module/featured.php
+CODE: <?php
+LINE: 6
+----------------------------------------------------------------
+MOD: Fix opencart 3 installer folder limitation
+
+FILE: admin/controller/marketplace/install.php
+CODE: $safe = false;
+LINE: 146
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 215
+----------------------------------------------------------------
+MOD: Nice Theme
+
+FILE: catalog/controller/common/header.php
+CODE: $this->load->language('common/header');
+LINE: 46
+CODE: $data['wishlist']
+LINE: 61
+
+FILE: catalog/controller/common/footer.php
+CODE: $this->load->language('common/footer');
+LINE: 4
+CODE: $data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
+LINE: 32
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $this->load->language('product/product');
+LINE: 6
+LINE: 555
+LINE: 595
+LINE: 640
+
+FILE: catalog/controller/checkout/cart.php
+CODE: $this->load->language('checkout/cart');
+LINE: 4
+LINE: 264
+LINE: 386
+LINE: 413
+
+FILE: catalog/controller/product/compare.php
+CODE: $this->load->language('product/compare');
+LINE: 4
+LINE: 142
+
+FILE: catalog/controller/account/wishlist.php
+CODE: $this->load->language('account/wishlist');
+LINE: 10
+LINE: 118
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'),
+LINE: 382
+LINE: 491
+
+FILE: (sub modification) catalog/controller/product/compare.php
+CODE: $json['total'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
+LINE: 176
+
+FILE: (sub modification) catalog/controller/account/wishlist.php
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+LINE: 146
+CODE: $json['total'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+LINE: 165
+
+FILE: catalog/controller/common/cart.php
+CODE: $this->load->language('common/cart');
+LINE: 4
+CODE: $data['text_items'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 50
+
+FILE: (sub modification) catalog/controller/checkout/cart.php
+CODE: $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total, $this->session->data['currency']));
+LINE: 382
+LINE: 491
+
+FILE: catalog/controller/common/search.php
+CODE: return $this->load->view('common/search', $data);
+LINE: 66
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['menu'] = $this->load->controller('common/menu');
+LINE: 80
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['header'] = $this->load->controller('common/header');
+LINE: 485
+
+FILE: catalog/controller/common/home.php
+CODE: $data['column_left']
+LINE: 13
+
+FILE: (sub modification) catalog/controller/product/product.php
+CODE: $data['column_left'] = $this->load->controller('common/column_left');
+LINE: 472
+CODE: $data['column_right'] = $this->load->controller('common/column_right');
+LINE: 473
+
+FILE: (sub modification) catalog/controller/common/header.php
+CODE: $data['name'] = $this->config->get('config_name');
+LINE: 37
+----------------------------------------------------------------

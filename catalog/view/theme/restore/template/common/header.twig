@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+{% if robots %}
+<meta name="robots" content="{{ robots }}" />
+{% endif %}
+<base href="{{ base }}" />
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="catalog/view/theme/restore/assets/css/owl.carousel.min.css"/>
+<script src="catalog/view/theme/restore/assets/js/owl.carousel.min.js"></script>
+    <link href="catalog/view/theme/restore/stylesheet/pe-icon-7-stroke.min.css" rel="stylesheet">
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    {% if style_template %}
+    <link href="catalog/view/theme/restore/stylesheet/stylesheet-{{ style_template }}.css" rel="stylesheet">
+    {% else %}
+    <link href="catalog/view/theme/restore/stylesheet/stylesheet-red.css" rel="stylesheet">
+    {% endif %}
+
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}"></script>
+{% endfor %}
+<script src="catalog/view/javascript/common.js"></script>
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+
+</head>
+
+
+<body class="{{ body_class }}">
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="logo">
+                    {% if logo %}
+                        <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+                    {% else %}
+                        <h1><a href="{{ home }}">{{ name }}</a></h1>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                {% if header_menu_toggle %}
+                <div id="menu-list-top">
+                    <div class="container">
+                        <ul class="nav navbar-nav navbar-left">
+                            {% for item in header_menu %}
+                                <li><a href="{{ item.link[language_id] }}">{{ item.title[language_id] }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+                {% endif %}
+                <div class="online-help-box">
+                    <span class="pe-7s-headphones"></span>
+                    <div class="title">{{ text_need_help }}</div>
+                    <a href="tel:{{ telephone }}" class="text">{{ telephone }}</a>
+                </div>
+                <div class="online-help-box email-box">
+                    <span class="pe-7s-mail-open"></span>
+                    <div class="title">{{ text_send_email }}</div>
+                    <a href="mailto:{{ email }}" class="text">{{ email }}</a>
+                </div>
+                <div class="dropdown setting-dropdown">
+                    <button class="dropdown-toggle setting-icon" data-toggle="dropdown"><span class="pe-7s-config"></span></button>
+                    <div class="dropdown-menu setting-list">
+                        <div class="setting-list-item">{{ currency }}</div>
+                        <div class="setting-list-item">{{ language }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="menu" class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <div id="mobile-cart"><span class="pe-7s-cart"></span><i></i></div>
+            <div id="info-btn"><span class="pe-7s-info"></span></div>
+            <div id="mobile-sidebar-btn" class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-brand">
+                {% if logo %}
+                    <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+                {% else %}
+                    <h1><a href="{{ home }}">{{ name }}</a></h1>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="sidebar" id="mobile-sidebar">
+            <ul class="nav navbar-nav">
+                {{ menu }}
+                <li class="hide-tablet">{{ search }}</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="show-tablet">
+                    <a class="icon-btn" href="index.php?route=product/search">
+                        <span class="pe-7s-search"></span>
+                        <i class="btn-text">{{ text_search_text }}</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-btn" href="{{ wishlist }}" id="wishlist-total">
+                        <span class="pe-7s-like"></span>
+                        <i class="btn-text">{{ text_wishlist_text }}</i>
+                        <span class="count">{{ text_wishlist }}</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-btn" href="{{ compare }}" id="compare-total">
+                        <span class="pe-7s-repeat"></span>
+                        <i class="btn-text">{{ text_compare_text }}</i>
+                        <span class="count">{{ text_compare }}</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="{{ account }}" title="{{ text_account }}" class="icon-btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="pe-7s-user"></span>
+                        <i class="btn-text">{{ text_profile }}</i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        {% if logged %}
+                            <li><a href="{{ account }}">{{ text_account }}</a></li>
+                            <li><a href="{{ order }}">{{ text_order }}</a></li>
+                            <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                            <li><a href="{{ download }}">{{ text_download }}</a></li>
+                            <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                        {% else %}
+                            <li><a href="{{ register }}">{{ text_register }}</a></li>
+                            <li><a href="{{ login }}">{{ text_login }}</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                {{ cart }}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+

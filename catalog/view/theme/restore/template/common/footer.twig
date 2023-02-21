@@ -1,0 +1,143 @@
+{% if newsletter_toggle %}
+<div id="footer-newsletter">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="title-block">
+            <span class="pe-7s-mail-open-file"></span>
+            <div class="title">{{ text_newsletter_title }}</div>
+            <div class="promotext">{{ text_newsletter_promo_text }}</div>
+          </div>
+        </div>
+        <div class="col-md-7">
+         <div class="newslatter-box">
+           <input type="text" class="form-control" id="input-newsletter" placeholder="{{ text_newsletter_text }}" value="" name="newsletter">
+           <input type="button" id="subcribe-btn" class="btn" value="{{ text_subcribe }}">
+         </div>
+          <div id="error-msg"></div>
+        </div>
+      </div>
+  </div>
+</div>
+  <script><!--
+    function validateEmail($email) {
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      return emailReg.test( $email );
+    }
+    $(document).ready(function(){
+      $('#subcribe-btn').click(function(){
+        var email = $('#input-newsletter').val();
+        if(email == ''){
+          var error = '{{ text_newsletter_text }}';
+        }
+        if( !validateEmail(email)) {
+          var error = '{{ text_newsletter_correct }}';
+        }
+        if(error != null){
+          $('#error-msg').html('');
+          $('#error-msg').append(error);
+        } else {
+          var dataString = 'email='+ email;
+          $.ajax({
+            url: 'index.php?route=common/footer/addToNewsletter',
+            type: 'post',
+            data: dataString,
+            success: function(html) {
+              $('#error-msg').append(html);
+            }
+          });
+        }
+      })
+    });
+    //--></script>
+{% endif %}
+<div id="backtotop"><span class="pe-7s-angle-up"></span> </div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <div class="footer-contact">
+          <a href="tel:{{ telephone }}" class="phone"><span class="fa fa-phone"></span>{{ telephone }}</a>
+          <a href="mailto:{{ email }}" class="email">{{ email }}</a>
+          {% if open %}
+          <div class="open-hours">
+            {{ open }}
+          </div>
+          {% endif %}
+          <div class="social-btn">
+            {% if social_link_vk %}<a href="{{ social_link_vk }}" target="_blank"><i class="fa fa-vk"></i></a>{% endif %}
+            {% if social_link_fb %}<a href="{{ social_link_fb }}" target="_blank"><i class="fa fa-facebook"></i></a>{% endif %}
+            {% if social_link_in %}<a href="{{ social_link_in }}" target="_blank"><i class="fa fa-instagram"></i></a>{% endif %}
+            {% if social_link_tw %}<a href="{{ social_link_tw }}" target="_blank"><i class="fa fa-twitter"></i></a>{% endif %}
+            {% if social_link_yt %}<a href="{{ social_link_yt }}" target="_blank"><i class="fa fa-youtube"></i></a>{% endif %}
+            {% if social_link_li %}<a href="{{ social_link_li }}" target="_blank"><i class="fa fa-linkedin"></i></a>{% endif %}
+            {% if social_link_ok %}<a href="{{ social_link_ok }}" target="_blank"><i class="fa fa-odnoklassniki"></i></a>{% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>{{ text_extra }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+      </div>
+    </div>
+    {% if informations %}
+      <div class="footer-main-menu">
+        <ul class="list-unstyled">
+          {% for information in informations %}
+            <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if payment_icon_toggle %}
+    <div class="footer-payment-box">
+      <p>{{ text_payment }}</p>
+      <ul class="list-unstyled payment-list">
+        {% for payment_icon_item in payment_icon %}
+        <li><img src="image/catalog/payment/{{ payment_icon_item }}.png" alt=""></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  <div class="footer-powered">
+    <div class="container">
+      <div class="powered">{{ powered }}</div>
+      <div class="copyright">{{ copyright }}</div>
+    </div>
+
+  </div>
+</footer>
+
+
+{% for script in scripts %}
+  <script src="{{ script }}"></script>
+{% endfor %}
+
+
+</body>
+</html>
+
+

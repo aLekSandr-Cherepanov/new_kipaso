@@ -1,0 +1,176 @@
+2023-02-14 10:56:39 - PHP Warning:  fopen(D:/OSPanel/domains/myshop.loc/storage/cache/cache.nice_search.2.0.1676375799): failed to open stream: Permission denied in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 49
+2023-02-14 10:56:39 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 51
+2023-02-14 10:56:39 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 53
+2023-02-14 10:56:39 - PHP Warning:  fflush() expects parameter 1 to be resource, bool given in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 55
+2023-02-14 10:56:39 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 57
+2023-02-14 10:56:39 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 59
+2023-02-15 9:59:09 - PHP Warning:  unlink(D:/OSPanel/domains/myshop.loc/storage/cache/cache.admin.language.1676448615): No such file or directory in D:\OSPanel\domains\myshop.loc\system\library\cache\file.php on line 17
+2023-02-15 11:35:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\OSPanel\domains\myshop.loc\storage\modification\catalog\controller\common\menu.php on line 90
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:19 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 28 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 25 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 46
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 45
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 34 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Undefined offset: 18 in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48
+2023-02-15 12:59:28 - PHP Notice:  Trying to access array offset on value of type null in D:\OSPanel\domains\myshop.loc\catalog\model\extension\module\oop_category_plus.php on line 48

@@ -1,0 +1,72 @@
+<h3 class="section-title">{{ heading_title }}</h3>
+<div class="owl-carousel custom-nav featuredproduct-carousel">
+  {% for product in products %}
+    <div class="product-layout">
+      <div class="product-thumb transition">
+        {% if product.sale %}
+          <div class="sale">-{{ product.sale }}%</div>
+        {% endif %}
+        <div class="image">
+          <a href="{{ product.href }}">
+            <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" />
+          </a>
+        </div>
+        <div class="caption">
+          <h3><a href="{{ product.href }}">{{ product.name }}</a></h3>
+          <div class="rating">
+            {% for i in 1..5 %}
+              {% if product.rating < i %}
+                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+              {% else %}
+                <span class="fa fa-stack"><i class="fa fa-star stary fa-stack-2x"></i><i class="fa fa-star fa-stack-2x"></i></span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if product.price %}
+            <div class="price">
+              {% if not product.special %}
+                {{ product.price }}
+              {% else %}
+                <span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="button-group">
+            <button class="icon-btn" type="button" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');">
+              <span class="pe-7s-like"></span>
+            </button>
+            <button class="btn main-btn" type="button" onclick="cart.add('{{ product.product_id }}');"><i class="fa fa-shopping-basket" aria-hidden="true"></i>{{ button_cart }}</button>
+            <button class="icon-btn" type="button" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');">
+              <span class="pe-7s-repeat"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+  $('.featuredproduct-carousel').owlCarousel({
+    loop:false,
+    nav:false,
+    navText: ["<span class='pe-7s-angle-left'></span","<span class='pe-7s-angle-right'></span"],
+    dots:true,
+    margin:30,
+    responsive:{
+      0:{
+        items:1,
+      },
+      600:{
+        items:2,
+      },
+      992:{
+        items:3,
+      },
+      1200:{
+        items:4,
+      }
+    }
+  })
+</script>
+
