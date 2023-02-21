@@ -156,7 +156,8 @@
 }  
   
 .form-control {
-  border: 1px solid #e9e9e9;
+  border: 1px solid #b9b9b9;
+  border-radius: 8px;
 }
 
 .nav-tabs {
@@ -2762,7 +2763,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
     display: none;
   }
   .js .main-nav {
-    display: block;
+    display: flex;
   }
   .main-nav {
     background-color: transparent;
@@ -2882,12 +2883,12 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 }
 
 .main-nav-wrap {
-  background-color: #3b3b3c;
+  background-color: #00aed9;
 }
 
-.main-nav {
-  background-color: var(--color-primary);; /* for mobile */
-}
+/*.main-nav {
+  background-color: var(--color-primary);
+}*/
 
 
 .main-nav a {
@@ -3107,4 +3108,21 @@ footer h5 {
   font-size: 13px;
   font-weight: bold;
   color: #fff;
+}
+
+/* стили для редактирования стандартного шаблона */
+
+.link-phone {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon-label {
+  padding-left: 11px;
+}
+
+
+.main-nav {
+  display: flex;
+  justify-content: space-around;
 }
