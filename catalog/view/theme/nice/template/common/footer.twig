@@ -1,47 +1,53 @@
-<footer>
-  <div class="container footer-container">
-    <div class="row">
-      {% if informations %}
-      <div class="col-sm-3">
-        <h5>{{ text_information }}</h5>
-        <ul class="list-unstyled">
-         {% for information in informations %}
-          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
-          {% endfor %}
+<footer class="py-5">
+    <div class="row row-1">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Главная</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
         </ul>
       </div>
-      {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-          <li><a href="{{ return }}">{{ text_return }}</a></li>
-          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Пресс-центр</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
         </ul>
       </div>
-      <div class="col-sm-3">
-        <h5>{{ text_extra }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
-          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
-          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
-          <li><a href="{{ special }}">{{ text_special }}</a></li>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Контакты</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
         </ul>
       </div>
-      <div class="col-sm-3">
-        <h5>{{ text_account }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ account }}">{{ text_account }}</a></li>
-          <li><a href="{{ order }}">{{ text_order }}</a></li>
-          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
-          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
-        </ul>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Подпишитесь на рассылку</h5>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <input id="newsletter1" type="text" class="form-control form-footer" placeholder="Email">
+            <button class="btn btn-primary" type="button">Подписаться</button>
+          </div>
+        </form>
       </div>
     </div>
-    <hr>
-    <p>{{ powered }}</p>
-  </div>
-</footer>
+
+    <div class="flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2004 - 2023 Компания КИПАСО - оборудование КИП и А, промышленная автоматика, манометры Волгоград.</p>
+    </div>
+  </footer>
 <!-- Report Modal -->
 <div id="report-modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
