@@ -3148,3 +3148,24 @@ footer h5 {
   width: 50%;
   height: auto;
 }
+
+.carousel {
+  display: none;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.icon-category {
+  margin-right: 40px;
+}
+
+.category-title {
+  font-size: 20px;
+}
+
+.category {
+  padding: 20px;
+}
