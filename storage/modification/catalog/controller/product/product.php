@@ -581,6 +581,9 @@ class ControllerProductProduct extends Controller {
 			$data['reviews'][] = array(
 				'author'     => $result['author'],
 				'text'       => nl2br($result['text']),
+
+				'reply'      => html_entity_decode($result['reply'], ENT_QUOTES, 'UTF-8'),
+        
 				'rating'     => (int)$result['rating'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added']))
 			);

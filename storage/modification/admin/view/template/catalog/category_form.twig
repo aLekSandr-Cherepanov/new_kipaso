@@ -32,6 +32,9 @@
             <li><a href="#tab-nice-megamenu" data-toggle="tab">{{ tab_nice_megamenu }}</a></li>
             <!-- Nice MegaMenu . End -->
 
+
+            <li><a href="#tab-image" data-toggle="tab">{{ tab_image }}</a></li>
+        
             <li><a href="#tab-seo" data-toggle="tab">{{ tab_seo }}</a></li>
             <li><a href="#tab-design" data-toggle="tab">{{ tab_design }}</a></li>
           </ul>
@@ -54,6 +57,20 @@
                       {% endif %}
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-header{{ language.language_id }}"><span data-toggle="tooltip" title="{{ help_header }}">{{ entry_header }}</span></label>
+                    <div class="col-sm-10">
+                      <input type="text" name="category_description[{{ language.language_id }}][header]" value="{{ category_description[language.language_id] ? category_description[language.language_id].header }}" placeholder="{{ entry_header }}" id="input-header{{ language.language_id }}" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-short-description{{ language.language_id }}">{{ entry_short_description }}<br /><button type="button" class="btn btn-primary btn-xs summernote" data-toggle="button" aria-pressed="false" autocomplete="off" data-language="{{ language.language_id }}">Summernote</button></label>
+                    <div class="col-sm-10">
+                      <textarea name="category_description[{{ language.language_id }}][short_description]" placeholder="{{ entry_short_description }}" id="input-short-description{{ language.language_id }}" class="form-control">{{ category_description[language.language_id] ? category_description[language.language_id].short_description }}</textarea>
+                    </div>
+                  </div>
+        
                   <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-description{{ language.language_id }}">{{ entry_description }}</label>
                     <div class="col-sm-10">
@@ -162,6 +179,22 @@
                 </div>
               </div>
               <div class="form-group">
+
+                <label class="col-sm-2 control-label" for="input-information"><span data-toggle="tooltip" title="{{ help_information }}">{{ entry_information }}</span></label>
+                <div class="col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      {% if information %}
+                      <input type="checkbox" name="information" value="1" checked="checked" id="input-information" />
+                      {% else %}
+                      <input type="checkbox" name="information" value="1" id="input-information" />
+                      {% endif %}
+                      &nbsp; </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+        
                 <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
                 <div class="col-sm-10">
                   <select name="status" id="input-status" class="form-control">
@@ -260,6 +293,39 @@
             //--></script>
             <!-- Nice MegaMenu . End -->
 
+
+            <div class="tab-pane" id="tab-image">
+              <div class="table-responsive">
+                <table id="images" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">{{ entry_additional_image }}</td>
+                      <td class="text-right">{{ entry_sort_order }}</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% set image_row = 0 %}
+                  {% for category_image in category_images %}
+                  <tr id="image-row{{ image_row }}">
+                    <td class="text-left"><a href="" id="thumb-image{{ image_row }}" data-toggle="image" class="img-thumbnail"><img src="{{ category_image.thumb }}" alt="" title="" data-placeholder="{{ placeholder }}" /></a>
+                      <input type="hidden" name="category_image[{{ image_row }}][image]" value="{{ category_image.image }}" id="input-image{{ image_row }}" /></td>
+                    <td class="text-right"><input type="text" name="category_image[{{ image_row }}][sort_order]" value="{{ category_image.sort_order }}" placeholder="{{ entry_sort_order }}" class="form-control" /></td>
+                    <td class="text-left"><button type="button" onclick="$('#image-row{{ image_row }}').remove();" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                  </tr>
+                  {% set image_row = image_row + 1 %}
+                  {% endfor %}
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td class="text-left"><button type="button" onclick="addImage();" data-toggle="tooltip" title="{{ button_image_add }}" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+        
             <div class="tab-pane" id="tab-seo">
               <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ text_keyword }}</div>
               <div class="table-responsive">
@@ -339,7 +405,7 @@
 $('input[name=\'path\']').autocomplete({
 	'source': function(request, response) {
 		$.ajax({
-			url: 'index.php?route=catalog/category/autocomplete&user_token={{ user_token }}&filter_name=' +  encodeURIComponent(request),
+			url: 'index.php?route=catalog/category/autocomplete&user_token={{ user_token }}{% if information != '' %}&filter_information={{ information }}{% endif %}&filter_name=' +  encodeURIComponent(request),
 			dataType: 'json',
 			success: function(json) {
 				json.unshift({
@@ -362,6 +428,23 @@ $('input[name=\'path\']').autocomplete({
 	}
 });
 //--></script>
+
+  <script type="text/javascript"><!--
+var image_row = {{ image_row }};
+
+function addImage() {
+	html  = '<tr id="image-row' + image_row + '">';
+	html += '  <td class="text-left"><a href="" id="thumb-image' + image_row + '"data-toggle="image" class="img-thumbnail"><img src="{{ placeholder }}" alt="" title="" data-placeholder="{{ placeholder }}" /></a><input type="hidden" name="category_image[' + image_row + '][image]" value="" id="input-image' + image_row + '" /></td>';
+	html += '  <td class="text-right"><input type="text" name="category_image[' + image_row + '][sort_order]" value="" placeholder="{{ entry_sort_order }}" class="form-control" /></td>';
+	html += '  <td class="text-left"><button type="button" onclick="$(\'#image-row' + image_row  + '\').remove();" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+	html += '</tr>';
+
+	$('#images tbody').append(html);
+
+	image_row++;
+}
+//--></script> 
+        
   <script type="text/javascript"><!--
 $('input[name=\'filter\']').autocomplete({
 	'source': function(request, response) {
@@ -394,4 +477,26 @@ $('#category-filter').delegate('.fa-minus-circle', 'click', function() {
   <script type="text/javascript"><!--
 $('#language a:first').tab('show');
 //--></script></div>
+
+  <script type="text/javascript"><!--
+$('.summernote').on('click', function () {
+	if ($(this).hasClass('active')) {
+		$('#input-short-description' + $(this).data('language')).summernote('destroy');
+	} else {
+		$('#input-short-description' + $(this).data('language')).summernote({
+			focus: true,
+			lang: '{{ summernote }}'
+		});
+	}
+})
+
+$(document).ready(function() {
+	$('[name*=\'[short_description]\']').each(function() {
+		if ($(this).val()) {
+            $(this).parent().prev().children('.summernote').trigger('click');
+		}
+	});
+});
+//--></script>
+        
 {{ footer }}

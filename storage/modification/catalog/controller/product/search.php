@@ -139,6 +139,11 @@ class ControllerProductSearch extends Controller {
 		$categories_1 = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories_1 as $category_1) {
+
+			if ($category_1['information']) {
+				continue;
+			}
+        
 			$level_2_data = array();
 
 			$categories_2 = $this->model_catalog_category->getCategories($category_1['category_id']);
@@ -438,6 +443,9 @@ class ControllerProductSearch extends Controller {
 					'sub_category'  => $sub_category,
 					'description'   => $description,
 					'products'      => $product_total,
+
+					'informations'  => 0,
+        
 					'customer_id'   => $customer_id,
 					'ip'            => $ip
 				);

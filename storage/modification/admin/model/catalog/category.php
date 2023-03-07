@@ -1,7 +1,7 @@
 <?php
 class ModelCatalogCategory extends Model {
 	public function addCategory($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', nmm_promo_status = '" . (int)$data['nmm_promo_status'] . "', date_modified = NOW(), date_added = NOW()");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', nmm_promo_status = '" . (int)$data['nmm_promo_status'] . "', information = '" . (isset($data['information']) ? (int)$data['information'] : 0) . "', date_modified = NOW(), date_added = NOW()");
 
 		$category_id = $this->db->getLastId();
 
@@ -15,8 +15,15 @@ class ModelCatalogCategory extends Model {
 			$this->db->query("UPDATE " . DB_PREFIX . "category SET image = '" . $this->db->escape($data['image']) . "' WHERE category_id = '" . (int)$category_id . "'");
 		}
 
+
+		if (isset($data['category_image'])) {
+			foreach ($data['category_image'] as $category_image) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "category_image SET category_id = '" . (int)$category_id . "', image = '" . $this->db->escape($category_image['image']) . "', sort_order = '" . (int)$category_image['sort_order'] . "'");
+			}
+		}
+        
 		foreach ($data['category_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', nmm_alt = '" . $this->db->escape($value['nmm_alt']) . "', nmm_title = '" . $this->db->escape($value['nmm_title']) . "', nmm_text = '" . $this->db->escape($value['nmm_text']) . "', nmm_link = '" . $this->db->escape($value['nmm_link']) . "', nmm_anchor = '" . $this->db->escape($value['nmm_anchor']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', header = '" . $this->db->escape($value['header']) . "', short_description = '" . $this->db->escape($value['short_description']) . "', description = '" . $this->db->escape($value['description']) . "',  meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', nmm_alt = '" . $this->db->escape($value['nmm_alt']) . "', nmm_title = '" . $this->db->escape($value['nmm_title']) . "', nmm_text = '" . $this->db->escape($value['nmm_text']) . "', nmm_link = '" . $this->db->escape($value['nmm_link']) . "', nmm_anchor = '" . $this->db->escape($value['nmm_anchor']) . "'");
 		}
 
 		// MySQL Hierarchical Data Closure Table Pattern
@@ -67,7 +74,7 @@ class ModelCatalogCategory extends Model {
 	}
 
 	public function editCategory($category_id, $data) {
-		$this->db->query("UPDATE " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', nmm_promo_status = '" . (int)$data['nmm_promo_status'] . "', date_modified = NOW() WHERE category_id = '" . (int)$category_id . "'");
+		$this->db->query("UPDATE " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', nmm_promo_status = '" . (int)$data['nmm_promo_status'] . "', information = '" . (isset($data['information']) ? (int)$data['information'] : 0) . "', date_modified = NOW() WHERE category_id = '" . (int)$category_id . "'");
 
 		// Nice MegaMenu . Begin
 		if (isset($data['nmm_image'])) {
@@ -79,10 +86,19 @@ class ModelCatalogCategory extends Model {
 			$this->db->query("UPDATE " . DB_PREFIX . "category SET image = '" . $this->db->escape($data['image']) . "' WHERE category_id = '" . (int)$category_id . "'");
 		}
 
+
+		$this->db->query("DELETE FROM " . DB_PREFIX . "category_image WHERE category_id = '" . (int)$category_id . "'");
+
+		if (isset($data['category_image'])) {
+			foreach ($data['category_image'] as $category_image) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "category_image SET category_id = '" . (int)$category_id . "', image = '" . $this->db->escape($category_image['image']) . "', sort_order = '" . (int)$category_image['sort_order'] . "'");
+			}
+		}
+        
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_description WHERE category_id = '" . (int)$category_id . "'");
 
 		foreach ($data['category_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', nmm_alt = '" . $this->db->escape($value['nmm_alt']) . "', nmm_title = '" . $this->db->escape($value['nmm_title']) . "', nmm_text = '" . $this->db->escape($value['nmm_text']) . "', nmm_link = '" . $this->db->escape($value['nmm_link']) . "', nmm_anchor = '" . $this->db->escape($value['nmm_anchor']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "category_description SET category_id = '" . (int)$category_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', header = '" . $this->db->escape($value['header']) . "', short_description = '" . $this->db->escape($value['short_description']) . "', description = '" . $this->db->escape($value['description']) . "',  meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "', nmm_alt = '" . $this->db->escape($value['nmm_alt']) . "', nmm_title = '" . $this->db->escape($value['nmm_title']) . "', nmm_text = '" . $this->db->escape($value['nmm_text']) . "', nmm_link = '" . $this->db->escape($value['nmm_link']) . "', nmm_anchor = '" . $this->db->escape($value['nmm_anchor']) . "'");
 		}
 
 		// MySQL Hierarchical Data Closure Table Pattern
@@ -186,6 +202,9 @@ class ModelCatalogCategory extends Model {
 		}
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category WHERE category_id = '" . (int)$category_id . "'");
+
+		$this->db->query("DELETE FROM " . DB_PREFIX . "category_image WHERE category_id = '" . (int)$category_id . "'");
+        
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_description WHERE category_id = '" . (int)$category_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_filter WHERE category_id = '" . (int)$category_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "category_to_store WHERE category_id = '" . (int)$category_id . "'");
@@ -228,15 +247,23 @@ class ModelCatalogCategory extends Model {
 	}
 
 	public function getCategories($data = array()) {
-		$sql = "SELECT cp.category_id AS category_id, GROUP_CONCAT(cd1.name ORDER BY cp.level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') AS name, c1.parent_id, c1.sort_order FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category c1 ON (cp.category_id = c1.category_id) LEFT JOIN " . DB_PREFIX . "category c2 ON (cp.path_id = c2.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (cp.category_id = cd2.category_id) WHERE cd1.language_id = '" . (int)$this->config->get('config_language_id') . "' AND cd2.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+		$sql = "SELECT cp.category_id AS category_id, GROUP_CONCAT(cd1.name ORDER BY cp.level SEPARATOR '&nbsp;&nbsp;&gt;&nbsp;&nbsp;') AS name, c1.parent_id, c1.sort_order, c1.information FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "category c1 ON (cp.category_id = c1.category_id) LEFT JOIN " . DB_PREFIX . "category c2 ON (cp.path_id = c2.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd1 ON (cp.path_id = cd1.category_id) LEFT JOIN " . DB_PREFIX . "category_description cd2 ON (cp.category_id = cd2.category_id) WHERE cd1.language_id = '" . (int)$this->config->get('config_language_id') . "' AND cd2.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
 		if (!empty($data['filter_name'])) {
 			$sql .= " AND cd2.name LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
 		}
 
+
+		if (isset($data['filter_information']) && ($data['filter_information'] == '0' || $data['filter_information'] == '1')) {
+			$sql .= " AND c1.information = '" . (int)$data['filter_information'] . "' AND c2.information = '" . (int)$data['filter_information'] . "'";
+		}
+        
 		$sql .= " GROUP BY cp.category_id";
 
 		$sort_data = array(
+
+			'information',
+        
 			'name',
 			'sort_order'
 		);
@@ -278,6 +305,10 @@ class ModelCatalogCategory extends Model {
 		foreach ($query->rows as $result) {
 			$category_description_data[$result['language_id']] = array(
 				'name'             => $result['name'],
+
+				'header'            => $result['header'],
+				'short_description' => $result['short_description'],
+        
 				'meta_title'       => $result['meta_title'],
 				'meta_description' => $result['meta_description'],
 				'meta_keyword'     => $result['meta_keyword'],
@@ -325,6 +356,13 @@ class ModelCatalogCategory extends Model {
 		return $category_store_data;
 	}
 	
+
+	public function getCategoryImages($category_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category_image WHERE category_id = '" . (int)$category_id . "' ORDER BY sort_order ASC");
+
+		return $query->rows;
+	}
+        
 	public function getCategorySeoUrls($category_id) {
 		$category_seo_url_data = array();
 		
@@ -349,8 +387,18 @@ class ModelCatalogCategory extends Model {
 		return $category_layout_data;
 	}
 
-	public function getTotalCategories() {
-		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "category");
+	public function getTotalCategories($data = array()) {
+		
+		$sql = "SELECT COUNT(*) AS total FROM " . DB_PREFIX . "category";
+
+		$sql .= " WHERE category_id != ''";
+
+		if (isset($data['filter_information']) && ($data['filter_information'] == '0' || $data['filter_information'] == '1')) {
+			$sql .= " AND information = '" . (int)$data['filter_information'] . "'";
+		}
+
+		$query = $this->db->query($sql);
+        
 
 		return $query->row['total'];
 	}

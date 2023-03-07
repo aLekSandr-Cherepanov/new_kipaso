@@ -8,6 +8,9 @@ class ControllerCommonMenu extends Controller {
 
 		$this->load->model('catalog/product');
 
+		$this->load->model('extension/module/optimblog_information');
+        
+
 		$data['categories'] = array();
 
 		// Nice MegaMenu . Begin
@@ -42,7 +45,7 @@ class ControllerCommonMenu extends Controller {
 						);
 						
 						$grandchildren_data[] = array(
-							'name'  => $grandchild['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+							'name'  => $grandchild['name'] . ($category['information'] ? ($category['information'] && $this->config->get('information_optimblog_information_count') ? ' (' . $this->model_extension_information_optimblog_information->getTotalInformations($filter_data) . ')' : '') : ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '')),
 							'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '_' . $grandchild['category_id'])
 						);
 					}
@@ -54,7 +57,7 @@ class ControllerCommonMenu extends Controller {
 					);
 
 					$children_data[] = array(
-						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'name'  => $child['name'] . ($category['information'] ? ($category['information'] && $this->config->get('information_optimblog_information_count') ? ' (' . $this->model_extension_information_optimblog_information->getTotalInformations($filter_data) . ')' : '') : ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '')),
 						'grandchildren' => $grandchildren_data, // Nice MegaMenu
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
