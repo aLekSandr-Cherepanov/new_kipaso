@@ -3132,7 +3132,7 @@ footer h5 {
 }
 
 .nav-link {
-  padding: 10px 0px !important;
+  padding: 10px !important;
 }
 
 .d-flex {
@@ -3300,4 +3300,17 @@ h2 {
 .link-category:hover {
   text-decoration: none;
   color: #4b9ae0;
+}
+
+.list-footer{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.data-company {
+  margin: 20px 20px 20px 0px;
+}
+
+.icon-footer {
+  margin-right: 15px;
 }

@@ -1,46 +1,77 @@
 <footer class="py-5">
     <div class="row row-1">
+      <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
+        <h1><a href="{{ home }}">{{ name }}</a></h1>
+          {% endif %}</div>
       <div class="col-6 col-md-2 mb-3">
-        <h5>Главная</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Главная</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Каталог</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Новости</a>
+          </li>
+          
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Пресс-центр</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Поверка и ремонт</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">АСУТП</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Прайс-листы</a>
+          </li>
+          
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Контакты</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Главная</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Каталог</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">О Нас</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Контакты</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Новости</a></li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Контакты</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-muted">Сервис-центр</a>
+          </li>
         </ul>
       </div>
 
       <div class="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Подпишитесь на рассылку</h5>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <input id="newsletter1" type="text" class="form-control form-footer" placeholder="Email">
-            <button class="btn btn-primary" type="button">Подписаться</button>
-          </div>
-        </form>
+        <div class="block-form">
+          <form>
+            <h5>Подпишитесь на рассылку</h5>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <input id="newsletter1" type="text" class="form-control form-footer" placeholder="Email">
+              <button class="btn btn-primary" type="button">Подписаться</button>
+            </div>
+          </form>
+          <ul class="list-footer data-company">
+            <li class="f-phone">
+              <img class="icon-footer" src="https://owen-prom.ru/image/design/phone.png" alt="number-phone">
+              <span>
+                <a href="tel:+78442203376">+7 (8442) 26-76-52</a>
+              </span>
+            </li>
+            <li class="f-adress data-company">
+              <img class="icon-footer" src="https://owen-prom.ru/image/design/point.png" alt="number-phone">
+              <span>г.Волгоград, 400074, Ул. Козловская 61</span>
+            </li>
+            <li class="f-email data-company">
+              <img class="icon-footer" src="https://owen-prom.ru/image/design/letter.png" alt="number-phone">
+              <span>
+                <a href="mailto:info@kipaso.ru">info@kipaso.ru</a>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
