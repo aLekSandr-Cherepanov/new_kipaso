@@ -3314,3 +3314,12 @@ h2 {
 .icon-footer {
   margin-right: 15px;
 }
+
+.nav-link {
+  color: #fff;
+  font-size: 13px;
+}
+
+.block-form {
+  font-size: 12px;
+}

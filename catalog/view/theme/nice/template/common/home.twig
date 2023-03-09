@@ -1,52 +1,5 @@
 {{ header }}
 <div id="common-home" class="container">
-  <div class="slider">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="http://new15939285087473.myaddshop.ru/img/1290x434/1001/sliders/311969cs-960_15939510698078.jpg">
-          <div class="slide-content">
-            <h1 style="color: #000000;">ТермоБрест</h1>
-            <div style="display: flex;flex-direction: column;">
-              <span>Изменение прайса с 15.04.2022</span>
-              <button style="color: white;background-color: #00aed9;border: 0;height: 40px;border-radius: 10px;margin-top: 25px;">Перейти</button>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="http://new15939285087473.myaddshop.ru/img/1290x434/1001/sliders/311969cs-960_15939510698078.jpg">
-        </div>
-        <div class="swiper-slide">
-          <img src="http://new15939285087473.myaddshop.ru/img/1290x434/1001/sliders/311969cs-960_15939510698078.jpg">
-        </div>
-        <div class="swiper-slide">
-          <img src="http://new15939285087473.myaddshop.ru/img/1290x434/1001/sliders/311969cs-960_15939510698078.jpg">
-        </div>
-        <div class="swiper-slide">
-          <img src="http://new15939285087473.myaddshop.ru/img/1290x434/1001/sliders/311969cs-960_15939510698078.jpg">
-        </div>
-      </div>
-    </div>
-
-  
-  
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        mousewheel: true,
-        keyboard: true,
-      });
-    </script>
-  </div>
-
-
   <div class="hero-category">
     <div class="wrapper-category">
         <div class="block-category">
@@ -516,7 +469,7 @@
 
 
 
-  <!--{{ block_home_top }}
+  {{ block_home_top }}
   <div class="row">{{ column_left }}
     {% if column_left and column_right %}
     {% set class = 'col-sm-6' %}
@@ -526,7 +479,7 @@
     {% set class = 'col-sm-12' %}
     {% endif %}
     <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
-    {{ column_right }}</div>-->
+    {{ column_right }}</div>
 
 
   
