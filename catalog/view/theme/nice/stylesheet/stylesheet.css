@@ -616,8 +616,9 @@ header {
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
-  padding-top: var(--space-4x);
-  padding-bottom: var(--space-4x);
+  /*padding-top: var(--space-4x);
+  padding-bottom: var(--space-4x);*/
+  padding: 12px 0;
 }
 
 .top-2--column {
@@ -764,6 +765,19 @@ header {
 .header-icons-container {
   height: 40px;
   line-height: 40px;
+  padding: 0 5px;
+  border-radius: 8px;
+}
+
+.header-icons-container:hover {
+  background-color: #e5e5e5;
+  text-decoration: none;
+
+}
+
+.header-icons-container a:hover {
+  text-decoration: none;
+
 }
 
 .header-icons-item {
@@ -2639,7 +2653,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 
 .main-nav a {
   display: block;
-  padding: 14px 20px;
+  padding: 11px 20px;
   text-decoration: none;
 }
 
@@ -2677,7 +2691,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 
 @media (min-width: 1600px) {
   .main-nav a {
-    padding: 14px 22px;
+    padding: 11px 22px;
   }
 }
 
@@ -2881,6 +2895,7 @@ https://www.opencart.com/index.php?route=marketplace/download&extension_id=38314
 
 .main-nav-wrap {
   background-color: #00aed9;
+  border-radius: 7px;
 }
 
 /*.main-nav {
@@ -3240,7 +3255,7 @@ h2 {
 .block-category {
   background-color: #00aed9;
   color: #fff;
-  border-radius: 10px;
+  border-radius: 7px;
   margin-bottom: 20px;
 }
 
@@ -3322,4 +3337,34 @@ h2 {
 
 .block-form {
   font-size: 12px;
+}
+
+.offset-md-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.wrapper-list {
+  padding-left: 0;
+}
+
+.wrapper-menu {
+  height: 50px;
+  background-color: #00aed9;
+  border-radius: 7px;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.link-menu {
+  color: #fff;
 }
