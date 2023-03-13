@@ -3365,7 +3365,7 @@ h2 {
 }
 
 .container {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .link-menu {
@@ -3378,6 +3378,7 @@ h2 {
   list-style: none;
   padding-left: 0px;
   padding-top: 12px;
+  box-shadow: 0px 7px 14px -8px #000000;
 }
 
 .menu-list:hover .dropdown-list {
@@ -3386,7 +3387,7 @@ h2 {
 
 .dropdown-list__li {
   background-color: rgb(255, 255, 255);
-  padding: 5px 10px 6px 10px;
+  padding: 5px 10px 10px 10px;
 }
 
 .sub-dropdown-list{
@@ -3398,6 +3399,8 @@ h2 {
   padding-left: 5px;
   list-style: none;
   background: #fff;
+  box-shadow: 0px 7px 14px -8px #000000;
+  /*margin-left: 8px;*/
 }
 
 .dropdown-list__li:hover .sub-dropdown-list {
