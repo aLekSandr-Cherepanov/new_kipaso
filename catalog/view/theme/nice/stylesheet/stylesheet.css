@@ -3352,6 +3352,7 @@ h2 {
 }
 
 .wrapper-list {
+  position: relative;
   padding-left: 0;
   margin-bottom: 0px;
 }
@@ -3372,12 +3373,33 @@ h2 {
 }
 
 .dropdown-list {
-  position: relative;
+  display: none;
+  position: absolute;
   list-style: none;
   padding-left: 0px;
   padding-top: 12px;
 }
 
+.menu-list:hover .dropdown-list {
+  display: block;
+} 
+
 .dropdown-list__li {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px 6px 10px;
+}
+
+.sub-dropdown-list{
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 12px;
+  left: 100%;
+  padding-left: 5px;
+  list-style: none;
+  background: #fff;
+}
+
+.dropdown-list__li:hover .sub-dropdown-list {
+  display: block;
 }
