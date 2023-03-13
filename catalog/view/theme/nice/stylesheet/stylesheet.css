@@ -3344,7 +3344,7 @@ h2 {
   justify-content: flex-end;
 }
 
-.menu-list{
+.wrapper-list{
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -3353,12 +3353,14 @@ h2 {
 
 .wrapper-list {
   padding-left: 0;
+  margin-bottom: 0px;
 }
 
 .wrapper-menu {
   height: 50px;
   background-color: #00aed9;
   border-radius: 7px;
+  font-size: 16px;
 }
 
 .container {
@@ -3367,4 +3369,15 @@ h2 {
 
 .link-menu {
   color: #fff;
+}
+
+.dropdown-list {
+  position: relative;
+  list-style: none;
+  padding-left: 0px;
+  padding-top: 12px;
+}
+
+.dropdown-list__li {
+  background-color: black;
 }
