@@ -3212,10 +3212,6 @@ h2 {
   color: #fff;
 }
 
-.slider {
-  margin-bottom: 100px;
-}
-
 .catalog-nav__item {
   display: flex;
   width: 50%;
@@ -3379,6 +3375,7 @@ h2 {
   padding-left: 0px;
   padding-top: 12px;
   box-shadow: 0px 7px 14px -8px #000000;
+  z-index: 100;
 }
 
 .menu-list:hover .dropdown-list {
@@ -3412,7 +3409,9 @@ h2 {
 /* Слайдер */
 
 .slider {
-  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 60px;
   padding: 0px 60px;
 }
 
@@ -3423,7 +3422,7 @@ h2 {
 .slick-slider.slick-dotted{}
 /* Ограничивающая оболочка */
 .slick-list {
-  overflow: hidden;
+  height: 400px !important;
 }
 /* Лента слайдов */
 .slick-track{
@@ -3474,7 +3473,12 @@ h2 {
   margin: 0px 10px;
 }
 /* Активная точка */
-.slider .slick-dots li.slick-active{}
+.slider .slick-dots li.slick-active button{
+  background-color: #949494;
+  border: 1px solid #000000;
+  width: 10px;
+  padding: 0;
+}
 /* Элемент точки */
 .slider .slick-dots li button{
   font-size: 0;
@@ -3482,5 +3486,9 @@ h2 {
   height: 10px;
   background-color: #fff;
   border-radius: 50%;
+  padding: 0;
+}
 
+.slick-slide img {
+  margin: 0 auto;
 }
