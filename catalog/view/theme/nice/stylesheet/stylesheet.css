@@ -2035,12 +2035,12 @@ a.product-thumb--name { display: block; }
 
 
 @media (min-width: 1200px) {
-  .product-grid.grid-hover-effect .-grid-hover-effect-hidden {
+  /*.product-grid.grid-hover-effect .-grid-hover-effect-hidden {
     display: none;
     margin-top: var(--space-2x);
-    opacity: 0;
+    opacity: 0;*/
     /*transition: all .25s ease;*/
-  }
+  /*}*/
   
   .product-grid.grid-hover-effect .product-thumb:hover .-grid-hover-effect-hidden {
     opacity: 1;
