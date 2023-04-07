@@ -1675,6 +1675,10 @@ html[dir=rtl] .breadcrumb > li::after {
   /*padding: var(--space-1) 0;*/
   padding-bottom: var(--space-1);
   margin-bottom: var(--space-4x);
+  background: #00aed9; 
+  padding: 8px;
+  color: #fff; 
+  border-radius: 8px;
 }
 
 /*.section--title-wrapper:before, .section--title-wrapper:after {
@@ -3470,7 +3474,7 @@ h2 {
 }
 .slider .slick-dots li{
   list-style: none;
-  margin: 0px 10px;
+  margin: 0px 6px;
 }
 /* Активная точка */
 .slider .slick-dots li.slick-active button{
