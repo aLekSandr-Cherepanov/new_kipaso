@@ -489,9 +489,9 @@ div.required .control-label:before {
 }
 /* Gradent to all drop down menus */
 .dropdown-menu li > a:hover {
-  text-decoration: none;
-  color: #ffffff;
-  background-color: var(--color-primary);
+  /*text-decoration: none;*/
+  color: #000000;
+  /*background-color: var(--color-primary);*/
   background-repeat: repeat-x;
 }
 
@@ -1010,6 +1010,11 @@ header {
   /*background: red;*/
 }
 
+.navbar-collapse {
+  background-color: #00aed9;
+}
+
+
 @media (min-width: 768px) {
   #menu-top .navbar-collapse {
     padding-left: 0;
@@ -1052,7 +1057,7 @@ header {
 
 /* menu categories */
 #menu-categories {
-  background-color: var(--color-primary);;
+  background-color: var(--color-primary);
   border-color: rgba(0, 0, 0, 0.25);
   min-height: 40px;
   margin-bottom: 10px;
@@ -1675,10 +1680,6 @@ html[dir=rtl] .breadcrumb > li::after {
   /*padding: var(--space-1) 0;*/
   padding-bottom: var(--space-1);
   margin-bottom: var(--space-4x);
-  background: #00aed9; 
-  padding: 8px;
-  color: #fff; 
-  border-radius: 8px;
 }
 
 /*.section--title-wrapper:before, .section--title-wrapper:after {
@@ -1733,7 +1734,7 @@ html[dir=rtl] .breadcrumb > li::after {
 
 .product-layout {
   margin-bottom: var(--space-4x);
-  float: none;
+  /*float: none;*/
 }
 
 .product-thumb {
@@ -2256,10 +2257,10 @@ a.meta-value {
 .product-tab--container .nav-tabs::-webkit-scrollbar { width: 0; height: 0; }
 
 .product-tab--container .nav-tabs a {
-  font-size: 18px;
+  font-size: .9rem;
   line-height: 1;
-  padding: 16px 20px;
-  margin-right: 4px;
+  padding: 10px 16px;
+  /*margin-right: 4px;*/
 }
 
 .product-tab--container .nav-tabs li.active > a {
@@ -3201,11 +3202,11 @@ h2 {
   object-fit: cover;
 }
 .swiper-button-next, .swiper-rtl .swiper-button-prev{
-  right: 140px !important; 
+  /*right: 140px !important; */
   left: auto;
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next{
-  left: 140px !important; 
+  /*left: 140px !important; */
   right: auto;
 }
 
@@ -3495,4 +3496,18 @@ h2 {
 
 .slick-slide img {
   margin: 0 auto;
+}
+
+.dropdown-linck {
+  color: #000000;
+}
+
+.dropdown-toggle {
+  color: #fff;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
