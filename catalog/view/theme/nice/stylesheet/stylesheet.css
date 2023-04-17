@@ -1012,6 +1012,7 @@ header {
 
 .navbar-collapse {
   background-color: #00aed9;
+  border-radius: 8px;
 }
 
 
@@ -1312,7 +1313,7 @@ html[dir=rtl] .breadcrumb > li::after {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #0d6efd;
   border-color: #0d6efd;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   border-radius: 8px;
 }
 .btn-primary:focus, .btn-primary.focus,
