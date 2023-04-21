@@ -119,37 +119,7 @@
 
         {# скопированный блок верстки карточки товара в категория товара #}
 
-        <div class="product-layout grid-hover-effect product-grid col-md-4 col-sm-6 col-xs-12col-xs-6">
-          <div class="product-thumb transition">
-            <div class="product-thumb--image -has-margins"><a href="" id="img-responsiveTest"><img src="" alt="" title="" class="img-responsive"  /></a></div>
-            <div class="product-thumb--info">
-              <div class="product-thumb--rating">
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-              </div>
-
-              <a class="product-thumb--name -bold-sm" id="product-thumb--nameTest" href=""></a>
-              <p class="product-thumb--description hidden-xs hidden-sm"></p>
-
-              <div class="price">
-
-                <span class="price-value -bold"></span>
-
-                <span class="price-old"></span><span class="price-new"></span>
-
-
-                <div  class="price-tax"></div>
-
-              </div>
-
-              <div class="product-thumb--hidden-wrapper">
-                <button type="button" class="btn btn-accent product-thumb--button-buy -grid-hover-effect-hidden" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="">{{ button_cart }}</span></button>
-                <div class="product-thumb--compare" data-toggle="tooltip" title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></div>
-                <div class="product-thumb--wishlist" data-toggle="tooltip" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart-o"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {#удалил скопированный код#}
 
         {#тут был написан js код который берет и выводит данные из api,убрал его в админку в конкретную категорию#}
         
