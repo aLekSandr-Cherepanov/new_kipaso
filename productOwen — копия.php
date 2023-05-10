@@ -27,7 +27,7 @@ foreach ($data as $record) {
     $sku = mysqli_real_escape_string($conn, $record["categories"][0]["items"][0]["products"][0]["sku"]);
     $price = mysqli_real_escape_string($conn, $record["categories"][0]["items"][0]["products"][0]["prices"][0]["price"]);
     $table = 'oc_product';
-    $sql = "INSERT INTO $table (model, product_id, sku, price) VALUES ('$model', '$productid', '$sku', '$price')";
+    $sql = "INSERT INTO oc_product (model, product_id, sku, price) VALUES ('$model', '$productid', '$sku', '$price')";
 
     if ($mysqli->query($sql) === TRUE) {
         echo "Данные успешно добавлены в таблицу.";
