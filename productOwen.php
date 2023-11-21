@@ -43,9 +43,9 @@ $productImage = $data["categories"][0]["items"][0]["products"][0]["image"];
 
 // Подключитесь к базе данных MySQL
 $host = 'localhost';
-$user = 'u0037735_ocart32';
-$password = '8o7(-p2hS2';
-$db_name = 'u0037735_ocart32';
+$user = '';
+$password = '8phS2';
+$db_name = 'u0rt32';
 $mysqli = new mysqli($host, $user, $password, $db_name);
 $mysqli->set_charset('utf8');
 
