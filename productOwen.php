@@ -10,7 +10,13 @@ $options = array(
 
 $context  = stream_context_create($options);
 $response = file_get_contents($url, false, $context);
+if ($response === false) {
+    die('Failed to fetch data from API');
+}
 $data = json_decode($response, true);
+if ($data === null) {
+    die('Invalid JSON received from API');
+}
 
 //получение вложенных элементов в json
 
@@ -34,25 +40,34 @@ $descSpecs = $descriptionDesk . " " . $descriptionSpecs;
 
 //заполнение таблицы oc_product_to_category
 $productid = $data["categories"][0]["items"][0]["products"][0]["prices"][0]["izd_code"];
-$productcategorytest = 63;
+$category_id = 63;
 
 //заполнение таблицы oc_product_image
 $product_id = $data["categories"][0]["items"][0]["products"][0]["prices"][0]["izd_code"];
 $productImage = $data["categories"][0]["items"][0]["products"][0]["image"];
 //$product_imageId = 3213;
 
-// Подключитесь к базе данных MySQL
-$host = 'localhost';
-$user = '';
-$password = '8phS2';
-$db_name = 'u0rt32';
-$mysqli = new mysqli($host, $user, $password, $db_name);
+// Подключитесь к базе данных MySQL, используя настройки OpenCart
+require_once __DIR__ . '/config.php';
+$mysqli = new mysqli(DB_HOSTNAME, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 $mysqli->set_charset('utf8');
 
 // Проверьте успешность подключения к базе данных
 if ($mysqli->connect_error) {
     die('Ошибка подключения (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
 }
+
+// Экранируем данные перед выполнением SQL-запросов
+$model = $mysqli->real_escape_string($model);
+$productid = $mysqli->real_escape_string($productid);
+$sku = $mysqli->real_escape_string($sku);
+$price = $mysqli->real_escape_string($price);
+$name = $mysqli->real_escape_string($name);
+$metatitle = $mysqli->real_escape_string($metatitle);
+$descSpecs = $mysqli->real_escape_string($descSpecs);
+$productImage = $mysqli->real_escape_string($productImage);
+$category_id = $mysqli->real_escape_string($category_id);
+$product_id = $mysqli->real_escape_string($product_id);
 
 // Обращение к таблице oc_product и добавление данных
 $table = 'oc_product';
@@ -75,7 +90,7 @@ if ($mysqli->query($sql) === TRUE) {
 
 // Обращение к таблице oc_product_to_category и добавление данных
 $table = 'oc_product_to_category';
-$sql = "INSERT INTO $table (product_id, category_id, main_category) VALUES ('107653', '63', '0')";
+$sql = "INSERT INTO $table (product_id, category_id, main_category) VALUES ('".$productid."', '".$category_id."', '0')";
 if ($mysqli->query($sql) === TRUE) {
     echo "Данные успешно добавлены в таблицу.";
 } else {
